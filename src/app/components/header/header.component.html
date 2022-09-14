@@ -1,0 +1,16 @@
+<header>
+  <div class="navbar bg-primary shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+      <strong>ThriftStore</strong>
+     <div class="form-group">
+       <input type="text"class="form-control" placeholder="serach books" [(ngModel)]="searchTerm" (keyup)="search($event)">
+       <i class="fa-solid fa-magnifying-glass"></i>
+     </div>
+     <button class="btn btn-primary" routerLink="/cart">
+      <i style="font-size: 30px;" class="fa-solid fa-cart-shopping"></i>
+      <div class="badge bg-danger">{{totalItem}}</div>
+    </button>
+    </div>
+  </div>
+ 
+</header>

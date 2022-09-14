@@ -1,0 +1,61 @@
+<ng-container *ngIf="products.length!=0">
+    <div class="ng-container">
+        <div class="card-table">
+            <div class="card-product">
+                <div class="table">
+                    <thead>
+                        <tr >
+                            <th>S.No.</th>
+                            <th>Product Name</th>
+                            <th>Product Image</th>
+                            <th>Description</th>
+                            <th>Price</th>
+                            <th>Category</th>
+                            <th>quantity</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let items of products;let i=index">
+                           <td> {{i+1}}</td>
+                           <td>{{items.title}}</td>
+                           <td><img src="{{items.image}}" alt="img"></td>
+                           <td>{{items.description}}</td>
+                           <td>{{items.price}}</td>
+                           <td>{{items.category}}</td>
+                           <td>{{items.quantity}}</td>
+                           <td>{{items.total}}</td>
+                           <!-- <button class="btn btn-danger" (click)="deletePost(items.id)"><i class="fa-solid fa-trash-can"></i></button> -->
+                            <button class="btn btn-danger" (click)="removeItem(items)"><i class="fa-solid fa-trash-can"></i></button>
+
+                        </tr>
+                        <td>
+                            <button  class="btn btn-primary" (click)="emptyCart()">Remove all</button>
+                        <strong>${{grandTotal}}</strong>
+                    </td>
+                    </tbody>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</ng-container>
+
+ 
+<ng-container *ngIf="products.length==0">
+    <div class="container">
+        <div class="card">
+            <h5 class="card-title">MyCart</h5>
+            <img src="https://imgs.search.brave.com/yQZkBPppGXFppKTtRb_0_dqGj2Wy-Y16H-mdq7dQ7rU/rs:fit:1000:1080:1/g:ce/aHR0cHM6Ly9jZG4x/LnZlY3RvcnN0b2Nr/LmNvbS9pLzEwMDB4/MTAwMC82OC8yMC9z/aG9wcGluZy1jYXJ0/LWdyYXBoaWMtaWNv/bi1kZXNpZ24tdGVt/cGxhdGUtdmVjdG9y/LTIzMzY2ODIwLmpw/Zw"
+                alt="">
+            <div class="item">
+                <p>add to cart</p>
+
+                <div>
+                    <button class="btn btn-primary"routerLink="/product">Shop Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container> 

@@ -1,0 +1,19 @@
+.card{
+    height: 60vh;
+    width:60%;
+    margin:30px;
+    padding:30px;
+   
+}
+.item{
+top:50%;
+left: 40%;
+position:absolute;
+text-align: center;
+}
+img{
+    margin-bottom: 30px;;
+    width:160px;
+    height:160px;
+   
+}

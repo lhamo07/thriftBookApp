@@ -1,0 +1,22 @@
+.form-control{
+   border-radius: 3px;
+   width:600px;
+   margin-left:20px; 
+}
+.fa-magnifying-glass{
+    position: absolute;
+    right: 52%;
+    z-index: 10;
+    top: 37%;
+    
+}
+.fa-cart-shopping{
+    position: absolute;
+    right: 2%;
+    top: 34%;
+}
+.bg-danger{
+    position: absolute;
+    right: 1%;
+    top: 47%;
+}
